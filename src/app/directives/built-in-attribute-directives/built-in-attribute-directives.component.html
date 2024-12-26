@@ -1,0 +1,8 @@
+<div class="main-container">
+    <div [ngClass]="'bg-red'"> dynamic Single class</div>
+    <div [ngClass]="classes"> dynamic multiple classes</div>
+    <div>
+        <input type="text" [(ngModel)]="name" />
+        <p> {{ name()}} </p>
+    </div>
+</div>

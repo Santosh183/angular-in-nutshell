@@ -1,0 +1,38 @@
+<h3> In built pipes demo </h3>
+<div class="flex flex-column flex-gap-high">
+    <div class="flex flex-column flex-gap-low">
+        <label> Currency Pipe ex-1</label>
+        <span> Syntax: <b>"3456 | currency:'USD' "</b> </span>
+        <span> Output: <b>{{3456 | currency:'USD'}}</b> </span>
+    </div>
+    <div class="flex flex-column flex-gap-low">
+        <label> Currency Pipe ex-2</label>
+        <span> Syntax: <b>"3456 | currency:'INR' "</b> </span>
+        <span> Output: <b>{{3456 | currency:'INR'}}</b> </span>
+    </div>
+    <div class="flex flex-column flex-gap-low">
+        <label> Date Pipe</label>
+        <span> Syntax: <b>"today | date:'dd-mm-yyyy' "</b> </span>
+        <span> Output: <b>{{ today | date:'dd-mm-yyyy'}}</b> </span>
+    </div>
+    <div class="flex flex-column flex-gap-low">
+        <label> uppercase Pipe</label>
+        <span> Syntax: <b>"santosh | uppercase "</b> </span>
+        <span> Output: <b>{{ 'santosh' | uppercase}}</b> </span>
+    </div>
+    <div class="flex flex-column flex-gap-low">
+        <label> lowercase Pipe</label>
+        <span> Syntax: <b>"SANTOSH | uppercase "</b> </span>
+        <span> Output: <b>{{ 'SANTOSH' | lowercase}}</b> </span>
+    </div>
+    <div class="flex flex-column flex-gap-low">
+        <label> titlecase Pipe</label>
+        <span> Syntax: <b>"santosh kadam | titlecase "</b> </span>
+        <span> Output: <b>{{ 'santosh kadam' | titlecase}}</b> </span>
+    </div>
+    <div class="flex flex-column flex-gap-low">
+        <label> Percent Pipe</label>
+        <span> Syntax: <b>" 0.25 | percent"</b> </span>
+        <span> Output: <b>{{ 0.25 | percent}}</b> </span>
+    </div>
+</div>

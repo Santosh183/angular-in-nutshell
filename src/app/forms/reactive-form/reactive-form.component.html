@@ -1,0 +1,91 @@
+<div class="flex flex-column flex-gap-low">
+    <div class="flex flex-column flex-gap-low">
+        <h3> For validation rules</h3>
+        <ul>
+            <li>user name: must not contain special characters</li>
+            <li>email: standard email validation.</li>
+            <li>phone: must be 10 characters where first character must be greater than 6.
+            </li>
+            <li>Address: line-1, line-2, line-3 and zip code. zip code must be numeric 6 digit code.</li>
+            <li>Submit button must be disabled if form is not valid</li>
+            <li>reset button should clear all the form.</li>
+            <li>validation should be applied to field only when user starts editing the field.</li>
+            <li>Upon successful submission we should show succss message saying submitted successfully.</li>
+        </ul>
+    </div>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="flex flex-column flex-gap-low">
+        <div>
+            <div>
+                <label for="name">Name: </label>
+                <input id="name" type="text" formControlName="name">
+            </div>
+            <div *ngIf="name?.invalid && name?.touched" class="flex flex-column flex-gap-low">
+                <small *ngIf="name?.errors?.['required']">Name is required.</small>
+                <small *ngIf="name?.errors?.['patterm']">Name must not contain special or numeric characters</small>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="email">Email: </label>
+                <input id="email" type="email" formControlName="email">
+            </div>
+            <div *ngIf="email?.invalid && email?.touched" class="flex flex-column flex-gap-low">
+                <small *ngIf="email?.errors?.['required']">Email is required.</small>
+                <small *ngIf="email?.errors?.['email']">Enter valid email address</small>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="phone">Phone: </label>
+                <input id="phone" type="text" formControlName="phone">
+            </div>
+            <div *ngIf="phone?.invalid && phone?.touched" class="flex flex-column flex-gap-low">
+                <small *ngIf="phone?.errors?.['required']">Phone number is required.</small>
+                <small *ngIf="email?.errors?.['pattern']">Phone number must contain 10 digit with first digit greater
+                    than 6</small>
+            </div>
+        </div>
+        <div class="flex flex-column flex-gap-low">
+            <h2>Address</h2>
+            <div>
+                <div>
+                    <label for="line-1">Line-1: </label>
+                    <input id="line-1" type="text" formControlName="line_1">
+                </div>
+                <div *ngIf="line_1?.invalid && line_1?.touched" class="flex flex-column flex-gap-low">
+                    <small *ngIf="line_1?.errors?.['required']">Address line 1 is required.</small>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="line-2">Line-2: </label>
+                    <input id="line-2" type="text" formControlName="line_2">
+                </div>
+                <div *ngIf="line_2?.invalid && line_2?.touched" class="flex flex-column flex-gap-low">
+                    <small *ngIf="line_2?.errors?.['required']">Address line 2 is required.</small>
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <label for="line-3">Line-3: </label>
+                    <input id="line-3" type="text" formControlName="line_3">
+                </div>
+                <div *ngIf="line_3?.invalid && line_3?.touched" class="flex flex-column flex-gap-low">
+                    <small *ngIf="line_3?.errors?.['required']">Address line 3 is required.</small>
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <label for="zip">ZIp code: </label>
+                    <input id="zip" type="text" formControlName="zip">
+                </div>
+                <div *ngIf="zip?.invalid && zip?.touched" class="flex flex-column flex-gap-low">
+                    <small *ngIf="zip?.errors?.['required']">zip is required</small>
+                    <small *ngIf="zip?.errors?.['pattern']">zip must be 6 digits</small>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

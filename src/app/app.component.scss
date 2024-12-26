@@ -1,0 +1,26 @@
+.full-height {
+    height: 98vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-gap-low {
+    gap: 10px;
+}
+
+.links {
+    width: 30%;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    border-right: 1px solid rgb(68, 67, 67);
+    overflow-y: auto;
+}
+
+.placeholder {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}

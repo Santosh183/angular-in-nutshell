@@ -1,0 +1,15 @@
+<div class="flex flex-column flex-gap-low">
+    <p> ng-for with conditional highlighting with ng-if</p>
+    <span *ngFor="let item of items;let i= index;">
+        <ng-container *ngIf="item.highlight">
+            <span class="highlight">
+                {{item.name}}
+            </span>
+        </ng-container>
+        <ng-container *ngIf="!item.highlight">
+            <span>
+                {{item.name}}
+            </span>
+        </ng-container>
+    </span>
+</div>

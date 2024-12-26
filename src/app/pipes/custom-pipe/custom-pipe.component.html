@@ -1,0 +1,13 @@
+<div class="flex flex-column flex-gap-medium">
+    <span>Enter user details</span>
+    <div>
+        <label>First Name: </label>
+        <input [(ngModel)]="firstName" type="text" />
+    </div>
+    <div>
+        <label>Last Name: </label>
+        <input [(ngModel)]="lastName" type="text" />
+    </div>
+</div>
+<h3 class="m-0 mt-1"> Greeting using pipe </h3>
+<span>{{ firstName | greeting:lastName}}</span>

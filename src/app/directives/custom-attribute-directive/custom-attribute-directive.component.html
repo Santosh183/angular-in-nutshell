@@ -1,0 +1,10 @@
+<div class="flex flex-column flex-gap-low">
+    <p> HighlIght element with custom color when hovered</p>
+    <div class="flex flex-gap-low">
+        <span>Choose color: </span>
+        <input type="color" [(ngModel)]="color" />
+    </div>
+    <div class="p-2" [appHighlight]="color" defaultBackground="white">
+        Highlight me
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="flex flex-column flex-gap-low">
+    <h3> I am from parent component and below links are for child routing</h3>
+    <div class="links flex flex-gap-low">
+        <a routerLink="/nested-routes/child-one"> child-one</a>
+        <a routerLink="/nested-routes/child-two"> child-two</a>
+    </div>
+    <div class="placeholder flex flex-column flex-gap-low">
+        <span> This is placeholder for loading children</span>
+        <router-outlet> </router-outlet>
+    </div>
+</div>
